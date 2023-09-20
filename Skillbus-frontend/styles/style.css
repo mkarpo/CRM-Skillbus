@@ -1,0 +1,15 @@
+@import url('main-styles/_glob.css');
+
+@import url('main-styles/_root.css');
+
+@import url('main-styles/_fonts.css');
+
+@import url('main-styles/_header.css');
+
+@import url('main-styles/_clients.css');
+
+@import url('main-styles/_modals.css');
+
+@import url('main-styles/_preloader.css');
+
+@import url('main-styles/_media.css');

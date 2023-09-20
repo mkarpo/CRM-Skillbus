@@ -1,0 +1,291 @@
+/* add */
+.add__modal {
+  position: absolute;
+  top: 75px;
+  left: 50%;
+  transform: translate(-50%, -300%);
+  z-index: 100;
+
+  opacity: 0;
+  transition: transform .5s ease-in-out, opacity .5s ease-in-out;
+}
+
+.add__modal--open {
+  opacity: 1;
+  transform: translateX(-50%);
+}
+
+.add__background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0, 0, 0, 0.271);
+  opacity: 0;
+  transition: opacity .5s ease-in-out;
+}
+
+.add__background--open {
+  opacity: 1;
+}
+
+.add__form {
+  width: 450px;
+  min-height: 396px;
+
+  background-color: #fff;
+}
+
+.add__form-wrap {
+  padding: 25px 30px;
+}
+
+.add__modal-wrap {
+  width: 450px;
+  height: 215px;
+  padding: 22px 15px 27px;
+
+  text-align: center;
+
+  background-color: #fff;
+}
+
+.add__header {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 30px;
+}
+
+.add__title {
+  margin: 0;
+  margin-right: 9px;
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 25px;
+  color: #333;
+}
+
+.add__title-delete {
+  margin-top: 0;
+  margin-bottom: 11px;
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 25px;
+  color: #333;
+}
+
+.add__id {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--color-grey);
+}
+
+.add__span {
+  display: inline-block;
+  margin-bottom: 32px;
+  max-width: 300px;
+
+  font-size: 15px;
+  line-height: 18px;
+  color: #333;
+}
+
+.add__input {
+  display: inline-block;
+  width: 100%;
+  padding-bottom: 4px;
+  margin-bottom: 27px;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid #c8c5d150;
+}
+
+.add__input-error {
+  border-color: rgba(240, 106, 77, .5);
+}
+
+.add__input:last-child {
+  margin-bottom: 0;
+}
+
+.add__contacts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  margin-bottom: 25px;
+
+  background-color: rgba(200, 197, 209, 0.3);
+}
+
+.add__contacts--active {
+  padding: 25px 30px;
+}
+
+.add__contacts-btn {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  color: #333;
+
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition: color .2s ease-in-out;
+}
+
+.add__contacts-btn:hover {
+  color: var(--color-purple);
+}
+
+.add__icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
+}
+
+.add__contacts-list {
+  width: 100%;
+}
+
+.add__contacts-wrap {
+  display: flex;
+  width: 100%;
+  height: 37px;
+  margin-bottom: 15px;
+}
+
+.add__contacts-wrap:last-child {
+  margin-bottom: 25px;
+}
+
+.add__contacts-select {
+  padding: 9px 34px 9px 10px;
+
+  border: 1px solid #C8C5D1;
+  background-color: #E7E5EB;
+
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--color-black);
+  cursor: pointer;
+}
+
+.add__contacts-option {
+  padding: 5px 12px;
+}
+
+.add__contacts-input {
+  width: 100%;
+  height: 100%;
+  padding: 8px 12px;
+  margin-left: -1px;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+
+  border: 1px solid #C8C5D1;
+  background-color: transparent;
+}
+
+.add__contacts-input:focus,
+.add__input {
+  outline: none;
+}
+
+.add__contacts-exit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 13px 8px;
+  margin-left: -1px;
+
+  border: 1px solid #C8C5D1;
+  background-color: #E7E5EB;
+  cursor: pointer;
+}
+
+.add__error {
+  margin-bottom: 9px;
+
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+  color: #F06A4D;
+}
+
+.add__btns-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 25px;
+}
+
+.add__btn-save {
+  margin-bottom: 5px;
+  padding: 13px 35px;
+
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  color: #fff;
+
+  border: none;
+  background-color: var(--color-purple);
+  cursor: pointer;
+}
+
+.add__btn-cancel {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: #333;
+  text-decoration: underline;
+
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.add__exit {
+  position: absolute;
+  right: 22px;
+  top: 22px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 23px;
+  height: 23px;
+  transform: rotate(45deg);
+  cursor: pointer;
+}
+
+.add__exit-span {
+  display: inline-block;
+  height: 21px;
+  width: 2px;
+
+  background-color: var(--color-grey);
+}
+
+.add__exit-span:first-child {
+  transform: rotate(90deg) translateY(-2px);
+}

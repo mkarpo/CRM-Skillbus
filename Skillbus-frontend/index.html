@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skillbus</title>
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/style.css">
+  <script defer src="index.js"></script>
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__container">
+      <nav class="header__nav">
+        <a class="header__link" href="index.html">
+          skb.
+        </a>
+        <input type="text" class="header__search" placeholder="Введите запрос">
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="clients">
+      <div class="clients__container">
+        <h2 class="clients__title">
+          Клиенты
+        </h2>
+        <div class="clients__table-wrap">
+          <table class="clients__table">
+            <thead class="clients__table-head">
+              <tr class="clients__table-headrow">
+                <th class="clients__table-name column--active" id="column-id">
+                  ID
+                  <svg class="clients__table-sort" id="sort-id" width="8" height="8" viewBox="0 0 8 8" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8 4L7.295 3.295L4.5 6.085L4.5 0L3.5 0L3.5 6.085L0.71 3.29L0 4L4 8L8 4Z" fill="#9873FF" />
+                  </svg>
+                </th>
+                <th class="clients__table-name" id="column-fio">
+                  Фамилия Имя Отчество
+                  <svg class="clients__table-sort" id="sort-fio" width="8" height="8" viewBox="0 0 8 8" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8 4L7.295 3.295L4.5 6.085L4.5 0L3.5 0L3.5 6.085L0.71 3.29L0 4L4 8L8 4Z" fill="#9873FF" />
+                  </svg>
+                </th>
+                <th class="clients__table-name" id="column-createDate">
+                  Дата и время создания
+                  <svg class="clients__table-sort" id="sort-createDate" width="8" height="8" viewBox="0 0 8 8"
+                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8 4L7.295 3.295L4.5 6.085L4.5 0L3.5 0L3.5 6.085L0.71 3.29L0 4L4 8L8 4Z" fill="#9873FF" />
+                  </svg>
+                </th>
+                <th class="clients__table-name" id="column-lastChange">
+                  Последние изменения
+                  <svg class="clients__table-sort" id="sort-lastChange" width="8" height="8" viewBox="0 0 8 8"
+                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8 4L7.295 3.295L4.5 6.085L4.5 0L3.5 0L3.5 6.085L0.71 3.29L0 4L4 8L8 4Z" fill="#9873FF" />
+                  </svg>
+                </th>
+                <th class="clients__table-name">
+                  Контакты
+                </th>
+                <th class="clients__table-name">
+                  Действия
+                </th>
+              </tr>
+            </thead>
+            <tbody class="clients__table-body">
+              <tr class="clients__table-bodyrow">
+                <td class="clients__table-descr" colspan="6" style="text-align: center;">
+                  Клиенты не найдены
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="preloader-block">
+            <div class="lds-ring">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="clients__btn-wrap">
+          <button class="clients__btn">
+            <svg class="clients__btn-icon" width="23" height="16" viewBox="0 0 23 16" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M14.5 8C16.71 8 18.5 6.21 18.5 4C18.5 1.79 16.71 0 14.5 0C12.29 0 10.5 1.79 10.5 4C10.5 6.21 12.29 8 14.5 8ZM5.5 6V3H3.5V6H0.5V8H3.5V11H5.5V8H8.5V6H5.5ZM14.5 10C11.83 10 6.5 11.34 6.5 14V16H22.5V14C22.5 11.34 17.17 10 14.5 10Z"
+                fill="none" />
+            </svg>
+
+            Добавить клиента
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+
+</html>

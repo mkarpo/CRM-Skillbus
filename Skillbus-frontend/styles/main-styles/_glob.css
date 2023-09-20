@@ -1,0 +1,21 @@
+html {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+
+  font-family: 'open-sans', sans-serif;
+
+  background-color: #F5F5F5;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.scroll-stop {
+  overflow: hidden;
+}

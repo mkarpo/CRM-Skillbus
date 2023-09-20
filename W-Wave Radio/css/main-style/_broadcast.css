@@ -1,0 +1,211 @@
+.broadcast {
+  padding-top: 94px;
+  padding-bottom: 92px;
+}
+
+.broadcast__title {
+  margin-top: 0;
+  margin-bottom: 12px;
+
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 100%;
+  color: var(--black-color);
+}
+
+.broadcast__menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.broadcast__select-span {
+  display: inline-block;
+  margin-bottom: 8px;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1;
+  color: var(--grey-color);
+}
+
+.broadcast__menu-footer {
+  position: relative;
+}
+
+.broadcast__menu-footer::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -113px;
+
+  width: 65px;
+  height: 89px;
+
+  background-image: url("../../image/mic.jpg");
+}
+
+.broadcast__menu-btn {
+  padding: 10px 54px;
+  margin-bottom: 15px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16px;
+  color: var(--black-color);
+
+  background-color: transparent;
+  border: 2px solid var(--black-color);
+  border-radius: 77px;
+  cursor: pointer;
+  transition: background-color .3s ease-in-out, color .3s ease-in-out, border-color .3s ease-in-out;
+}
+
+.broadcast__menu-btn:focus-visible {
+  color: #fff;
+
+  outline: none;
+  background-color: var(--black-color);
+}
+
+.broadcast__menu-btn:hover {
+  color: var(--black-color);
+
+  background-color: var(--light-purple);
+}
+
+.broadcast__menu-btn:active {
+  color: #fff;
+
+  background-color: var(--active-color);
+  border-color: var(--active-color);
+}
+
+.broadcast__menu-descr {
+  margin: 0;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--grey-color);
+}
+
+.broadcast__list {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 14px;
+}
+
+.broadcast__item {
+  width: 255px;
+
+  cursor: pointer;
+}
+
+.broadcast__item:not(:nth-child(3n)) {
+  margin-right: var(--gap);
+}
+
+.broadcast__item:not(:nth-last-child(-n+3)) {
+  margin-bottom: var(--gap);
+}
+
+.broadcast__item-image {
+  display: block;
+  height: 148px;
+
+  transition: opacity .3s ease-in-out;
+}
+
+.broadcast__item-content {
+  display: flex;
+  flex-direction: column;
+  padding: 18px 16px;
+
+  border: 1px solid #E6E8EC;
+}
+
+.broadcast__item-title {
+  margin-top: 0;
+  margin-bottom: 4px;
+
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1;
+  color: var(--black-color);
+}
+
+.broadcast__item-timetable {
+  margin-bottom: 20px;
+
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1;
+  color: var(--grey-color);
+}
+
+.broadcast__item-btn {
+  align-self: flex-start;
+  display: flex;
+  align-items: center;
+  padding: 2px;
+  margin-left: -2px;
+
+  font-weight: 400;
+  font-style: italic;
+  font-size: 16px;
+  line-height: 1;
+  color: var(--black-color);
+
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  transition: color .3s ease-in-out, background-color .3s ease-in-out;
+}
+
+.broadcast__item-arrow {
+  fill: var(--black-color);
+  transition: fill .3s ease-in-out;
+}
+
+.broadcast__item:focus-within {
+  outline: 1px solid var(--dark-purple);
+  outline-offset: 7px;
+}
+
+.broadcast__item:focus-within .broadcast__item-btn {
+  color: #fff;
+
+  background-color: var(--light-purple);
+  outline: none;
+}
+
+.broadcast__item:focus-within .broadcast__item-arrow {
+  fill: #fff;
+}
+
+.broadcast__item:hover {
+  outline: none;
+}
+
+.broadcast__item:hover .broadcast__item-image {
+  opacity: 0.7;
+}
+
+.broadcast__item:hover .broadcast__item-btn {
+  color: var(--dark-purple);
+
+  background-color: transparent;
+}
+
+.broadcast__item:hover .broadcast__item-arrow {
+  fill: var(--dark-purple);
+}
+
+.broadcast__item:active .broadcast__item-btn {
+  color: var(--active-color);
+}
+
+.broadcast__item:active .broadcast__item-arrow {
+  fill: var(--active-color);
+}

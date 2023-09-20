@@ -1,0 +1,338 @@
+/* radio-menu */
+.playlists__checkbox {
+  margin-bottom: 22px;
+}
+
+.playlists__checkbox-title {
+  margin: 0;
+  margin-bottom: 8px;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  color: var(--grey-color);
+}
+
+.playlists__checkbox-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.playlists__checkbox-label {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  padding-left: 42px;
+  height: 30px;
+
+  cursor: pointer;
+}
+
+.playlists__checkbox-label:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.playlists__checkbox-descr {
+  margin: 0;
+
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 20px;
+  color: var(--black-color);
+}
+
+.playlists__checkbox-item {
+  display: none;
+  opacity: 0;
+}
+
+.playlists__checkbox-descr::before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 26px;
+  height: 26px;
+
+  border: 2px solid var(--grey-color);
+  border-radius: 100%;
+  transition: background-color .2s ease-in-out, border-color .2s ease-in-out;
+}
+
+.playlists__checkbox-label:focus {
+  outline: none;
+}
+
+.playlists__checkbox-label:focus .playlists__checkbox-descr::before {
+  outline: none;
+  border-color: var(--dark-purple);
+  background-color: #D2D5DD;
+}
+
+.playlists__checkbox-label:hover .playlists__checkbox-descr::before {
+  border-color: var(--dark-purple);
+  background-color: #fff;
+}
+
+.playlists__checkbox-descr::after {
+  content: "";
+  position: absolute;
+  left: 9px;
+  top: 50%;
+
+  width: 12px;
+  height: 12px;
+
+  background-color: #fff;
+  border-radius: 100%;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: opacity .2s ease-in-out;
+}
+
+.playlists__checkbox-item:checked+.playlists__checkbox-descr::after {
+  opacity: 1;
+}
+
+.playlists__checkbox-item:checked+.playlists__checkbox-descr::before {
+  background-color: #6D31EE;
+  border-color: #6D31EE;
+}
+
+/* main */
+.playlists {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.playlists__title {
+  margin-top: 0;
+  margin-bottom: 12px;
+
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 1;
+  color: var(--black-color);
+}
+
+.playlists__menu-warn {
+  padding-top: 38px;
+
+  border-top: 1px solid #D2D5DD;
+}
+
+.playlists__menu-descr {
+  margin: 0;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: var(--grey-color);
+}
+
+.playlists__menu-copyright {
+  display: inline-block;
+  margin-bottom: 7px;
+
+  font-style: italic;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 22px;
+  color: var(--grey-color);
+}
+
+.playlists__menu-warn::after {
+  content: "18+";
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--grey-color);
+
+  border-radius: 100%;
+  border: 1px solid var(--grey-color);
+}
+
+.playlists__list {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 14px;
+}
+
+.playlists__item:not(:nth-child(4n)) {
+  margin-right: var(--gap);
+}
+
+.playlists__item:not(:nth-last-child(-n+4)) {
+  margin-bottom: 28px;
+}
+
+.playlists__item {
+  position: relative;
+  width: 160px;
+}
+
+.playlists__item-btn {
+  padding: 0;
+  width: 100%;
+
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.playlists__item-btn::before {
+  content: '';
+  position: absolute;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  right: 0;
+
+  height: 160px;
+  width: 160px;
+
+  background-color: #00000080;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+}
+
+.playlists__item-btn::after {
+  content: '';
+  position: absolute;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  right: 0;
+
+  height: 160px;
+
+  background-image: url('../../image/play_btn.svg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity .3s ease-in-out, transform .3s ease-in-out;
+}
+
+.playlists__item::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  width: 24px;
+  height: 20px;
+
+  background-color: var(--black-color);
+  background-size: 17px 12px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.playlists__item--russian::after {
+  background-image: url("../../image/russian.svg");
+}
+
+.playlists__item--england::after {
+  background-image: url("../../image/england.svg");
+}
+
+.playlists__item-img {
+  position: relative;
+  z-index: 0;
+
+  display: block;
+}
+
+.playlists__item-content {
+  padding: 15px;
+  width: 100%;
+
+  text-align: left;
+
+  background-color: #fff;
+  border: 1px solid #E6E8EC;
+  transition: background-color .3s ease-in-out, border-color .3s ease-in-out;
+}
+
+.playlists__item-content:focus {
+  outline: none;
+}
+
+.playlists__item-name {
+  margin-top: 0;
+  margin-bottom: 0;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1;
+  color: var(--black-color);
+
+  transition: color .3s ease-in-out;
+}
+
+.playlists__item-descr {
+  padding: 0;
+
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1;
+  color: var(--grey-color);
+  text-align: left;
+
+  border: none;
+  background-color: transparent;
+  transition: color .3s ease-in-out;
+}
+
+.playlists__item-descr,
+.playlists__item-btn:focus {
+  outline: none;
+}
+
+.playlists__item-btn:focus-within .playlists__item-content {
+  background-color: var(--light-purple);
+  border-color: var(--light-purple);
+}
+
+.playlists__item-btn:focus-within .playlists__item-descr {
+  color: var(--black-color);
+}
+
+.playlists__item-btn:hover .playlists__item-content {
+  background-color: var(--dark-purple);
+  border-color: var(--dark-purple);
+}
+
+.playlists__item-btn:hover .playlists__item-name,
+.playlists__item-btn:hover .playlists__item-descr {
+  color: #fff;
+}
+
+.playlists__item:hover .playlists__item-btn::before,
+.playlists__item:hover .playlists__item-btn::after {
+  opacity: 1;
+}
+
+.playlists__item-btn:active .playlists__item-content {
+  background-color: var(--active-color);
+  border-color: var(--active-color);
+}
+
+.playlists__item-btn:active .playlists__item-name,
+.playlists__item-btn:active .playlists__item-descr {
+  color: #fff;
+}
+
+.playlists__item:active .playlists__item-btn::after {
+  transform: scale(1.17);
+}

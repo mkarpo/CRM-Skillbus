@@ -1,0 +1,31 @@
+html {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+
+  font-family: 'Muller', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* glob */
+.container {
+  max-width: 1140px;
+  min-width: 286px;
+}
+
+.list {
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+.stop-scroll {
+  overflow: hidden;
+}
